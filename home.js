@@ -18,8 +18,8 @@ const createInnerHtml = () => {
         <tr>
             <td><img class="profile" src="${empPayrollData._profilePic}" alt=""></td>
             <td>${empPayrollData._name}</td>
-            <td>Male</td>
-            <td><div class="dept-label">${empPayrollData._department[0]}</div><div class="dept-label">${empPayrollData._department[1]}</div></td>
+            <td>${empPayrollData._gender}</td>
+            <td>${getDeptHtml(empPayrollData._department)}</td>
             <td>${empPayrollData._salary} </td>
             <td>${empPayrollData._startDate}</td>
             <td>
@@ -46,7 +46,7 @@ const createEmployeePayrollJSON = () => {
     let empPayrollListLocal = [
         {
             _name: 'Vaibhav Raut',
-            _gender: 'male',
+            _gender: 'Male',
             _department: [
                 'Finance',
                 'Engineer'
@@ -60,10 +60,9 @@ const createEmployeePayrollJSON = () => {
 
         {
             _name: 'Pranav Raut',
-            _gender: 'male',
+            _gender: 'Male',
             _department: [
-                'Sales',
-                'HR'
+                'Sales'
             ],
             _salary: '1000000',
             _startDate: '1 Feb 2020',
